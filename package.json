@@ -19,6 +19,7 @@
     "react-redux": "8.0.2",
     "react-router": "6.3.0",
     "react-router-dom": "6.3.0",
+    "react-speech": "^1.0.2",
     "redux": "4.2.0"
   },
   "scripts": {
