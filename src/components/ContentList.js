@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Speech from 'react-speech';
+
 // import { data } from '../data/data.js';
 // const fetch = require('node-fetch');
 // import fetch from 'node-fetch';
@@ -174,7 +175,7 @@ export default function ContentList({ data }) {
   let count = 0;
   // console.log(languages);
   return (
-    <div>
+    <div style={{ backgroundColor: 'pink' }}>
       <h1>Content List</h1>
       {/* <button onClick={() => readText('hello world')}>Get Voice</button> */}
       {/* <button onClick={getLanguage}>get All Voice</button> */}
