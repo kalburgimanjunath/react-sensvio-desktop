@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ContentList from './ContentList';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTodo } from '../redux/reducers/contentSlice';
-import 'draft-js/dist/Draft.css';
 
 export default function CreateContent() {
   const content = useSelector((state) => state.content);
