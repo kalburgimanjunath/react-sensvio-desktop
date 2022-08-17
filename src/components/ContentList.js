@@ -45,7 +45,6 @@ export default function ContentList({ data }) {
       <div>
         <div>
           Content:
-          {/* {item.title.toUpperCase()} */}
           {item.text}
           <button type="button" onClick={playText}>
             Play
