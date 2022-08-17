@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ContentList from './ContentList';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTodo } from '../redux/reducers/contentSlice';
-import { FormGroup, Label, Col, Row, Input } from 'reactstrap';
+import { FormGroup, Label, Col, Row, Input, Button } from 'reactstrap';
 export default function CreateContent() {
   const content = useSelector((state) => state.content);
   const [newtext, setText] = useState();
@@ -72,26 +72,28 @@ export default function CreateContent() {
             })}
         </Input>
       </FormGroup>
-
-      <button
-        type="button"
-        onClick={() => {
-          console.log({
-            title: 'title of the content',
-            text: newtext,
-            language: selLanguage,
-          });
-          dispatch(
-            addTodo({
+      <div>
+        <Button
+          color="primary"
+          type="button"
+          onClick={() => {
+            console.log({
               title: 'title of the content',
               text: newtext,
               language: selLanguage,
-            })
-          );
-        }}
-      >
-        Save
-      </button>
+            });
+            dispatch(
+              addTodo({
+                title: 'title of the content',
+                text: newtext,
+                language: selLanguage,
+              })
+            );
+          }}
+        >
+          Save
+        </Button>
+      </div>
     </div>
   );
 }
