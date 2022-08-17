@@ -90,6 +90,14 @@ export const readText = function (text, voicetype = 83, lang) {
     reading = true;
   }
 };
+export const pauseText = function () {
+  console.log('paused');
+  window.speechSynthesis.pause();
+};
+export const resumeText = function () {
+  console.log('resumed');
+  window.speechSynthesis.resume();
+};
 export default function ContentList({ data }) {
   const [languages, setLanguages] = useState([
     { language: 'English', code: 'en-us' },
@@ -131,10 +139,12 @@ export default function ContentList({ data }) {
     return (
       <div>
         <div>
-          Content:{item.text}
+          {count}:{item.text}
           <button onClick={() => readText(item.text, selVoice, selLanguage)}>
             Play = {selVoice} - {selLanguage}
           </button>
+          <button onClick={() => pauseText()}>Pause</button>
+          <button onClick={() => resumeText()}>Resume</button>
           {/* <Speech
             text={item.text}
             styles={style.button}

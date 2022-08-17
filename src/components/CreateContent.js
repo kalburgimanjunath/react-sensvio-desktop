@@ -76,7 +76,6 @@ export default function CreateContent() {
       >
         Save
       </button>
-      <ContentList data={content} />
     </div>
   );
 }
