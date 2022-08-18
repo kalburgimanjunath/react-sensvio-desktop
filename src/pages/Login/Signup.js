@@ -22,6 +22,7 @@ function Signup({ navigation }) {
     if (loading) return;
     if (user) {
       setLogin(true);
+      localStorage('user', user);
       // console.log('logged in');
       // history.replace('/dashboard');
     }
