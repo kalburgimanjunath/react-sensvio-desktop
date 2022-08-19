@@ -106,12 +106,12 @@ export default function ContentList({ data }) {
   ]);
   let voices = window.speechSynthesis.getVoices();
 
-  const [selLanguage, setSelLanguage] = useState();
+  const [selLanguage, setSelLanguage] = useState('en-us');
   const [voice, setVoice] = useState([
     { voice: 'Male', code: '1' },
     { voice: 'Female', code: '2' },
   ]);
-  const [selVoice, setSelVoice] = useState();
+  const [selVoice, setSelVoice] = useState(1);
 
   const style = {
     play: {
@@ -144,8 +144,8 @@ export default function ContentList({ data }) {
           <button onClick={() => readText(item.text, selVoice, selLanguage)}>
             Play = {selVoice} - {selLanguage}
           </button>
-          <button onClick={() => pauseText()}>Pause</button>
-          <button onClick={() => resumeText()}>Resume</button>
+          {/* <button onClick={() => pauseText()}>Pause</button>
+          <button onClick={() => resumeText()}>Resume</button> */}
           {/* <Speech
             text={item.text}
             styles={style.button}
@@ -168,7 +168,7 @@ export default function ContentList({ data }) {
             textAsButton={true}
           /> */}
         </div>
-        <div>Language:{item.language}</div>
+        {/* <div>Language:{item.language}</div> */}
       </div>
     );
   };
@@ -185,8 +185,7 @@ export default function ContentList({ data }) {
       }}
     >
       <h1>Content List</h1>
-      {/* <button onClick={() => readText('hello world')}>Get Voice</button> */}
-      {/* <button onClick={getLanguage}>get All Voice</button> */}
+
       <select id="voiceSelect" onChange={onSelChange}>
         {voices &&
           voices.length > 0 &&
