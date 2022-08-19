@@ -32,7 +32,7 @@ export default function CreateContent() {
   };
 
   return (
-    <div style={{ backgroundColor: 'orange' }}>
+    <div style={{ backgroundColor: 'orange', padding: 20, height: '100%' }}>
       <h1>Create Content</h1>
       <FormGroup row>
         <Label for="exampleText" sm={12} lg={12}>

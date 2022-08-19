@@ -175,7 +175,15 @@ export default function ContentList({ data }) {
   let count = 0;
   // console.log(languages);
   return (
-    <div style={{ backgroundColor: 'pink' }}>
+    <div
+      style={{
+        backgroundColor: 'pink',
+        padding: 20,
+        height: '100%',
+        overflowY: 'auto',
+        overflowX: 'hidden',
+      }}
+    >
       <h1>Content List</h1>
       {/* <button onClick={() => readText('hello world')}>Get Voice</button> */}
       {/* <button onClick={getLanguage}>get All Voice</button> */}

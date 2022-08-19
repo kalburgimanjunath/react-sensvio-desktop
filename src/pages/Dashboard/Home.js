@@ -7,7 +7,7 @@ import { FormGroup, Label, Col, Row, Input } from 'reactstrap';
 export default function Home() {
   const content = useSelector((state) => state.content);
   return (
-    <div className="container-fluid">
+    <div className="container-fluid css-selector">
       <Row>
         <Col xs="6">
           <CreateContent />
